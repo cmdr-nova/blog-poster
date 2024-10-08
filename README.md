@@ -3,7 +3,7 @@ Hello! This is my third little bot. This guy will go onto your VPS and live in 5
 What it does:
 
 - Upon initial load, it will check your feed for all existing links, and parse them into a brand new json file, automatically. It does this, so that when it runs the rest of the script, it doesn't spam your entire Mastodon feed with a billion posts and links, and from this point forward, will *only* look for brand new feed items.
-- Once a new blog post emerges into your RSS feed, it posts to Mastodon, and then adds that brand new item to the aforementioned json, that acts as an effective ignore list.
+- Once a new blog post emerges into your RSS feed, it posts to Mastodon and Discord, and then adds that brand new item to the aforementioned json, that acts as an effective ignore list.
 
 *The reason I set it up like this, is because Jekyll sometimes does this weird thing where, if you just grab from the RSS feed all willy nilly without ignoring old entries, it'll re-share those old entries at random whenever you build the site. You know. When you're updating it ... But not anymore!*
 
@@ -21,7 +21,7 @@ Then, use Nano to create the path and also the file.
 nano path/you/want/blog-poster.py
 ```
 
-Paste the source code into it, then edit the credentials to match what you're using. For Mastodon API, go into the Developer tab under preferences, create an app, and grab the access key. For the RSS feed, that's pretty self explanatory.
+Paste the source code into it, then edit the credentials to match what you're using. For Mastodon API, go into the Developer tab under preferences, create an app, and grab the access key. For the RSS feed, that's pretty self explanatory. For the Discord webhook, create a webhook one whichever channel in whichever server you want, and then copy the webhook URL.
 
 Once complete, write out, then exit Nano.
 
