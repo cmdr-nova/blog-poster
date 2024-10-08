@@ -1,4 +1,4 @@
-Hello! This is my third little bot. This guy will go onto your VPS and leave in 5 minute intervals. But let me explain. I got tired of the slog of having to copy and paste the links from my new posts, and then having to type up something about them, and then also hit the post button. So I made this bot to do it for me, instead.
+Hello! This is my third little bot. This guy will go onto your VPS and live in 5 minute intervals. But let me explain. I got tired of the slog of having to copy and paste the links from my new posts, and then having to type up something about them, and then also hit the post button. So I made this bot to do it for me, instead.
 
 What it does:
 
