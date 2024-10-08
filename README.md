@@ -5,6 +5,8 @@ What it does:
 - Upon initial load, it will check your feed for all existing links, and parse them into a brand new json file, automatically. It does this, so that when it runs the rest of the script, it doesn't spam your entire Mastodon feed with a billion posts and links, and from this point forward, will *only* look for brand new feed items.
 - Once a new blog post emerges into your RSS feed, it posts to Mastodon, and then adds that brand new item to the aforementioned json, that acts as an effective ignore list.
 
+*The reason I set it up like this, is because Jekyll sometimes does this weird thing where, if you just grab from the RSS feed all willy nilly without ignoring old entries, it'll re-share those old entries at random whenever you build the site. You know. When you're updating it ... But not anymore!*
+
 That's it!
 
 Do this:
