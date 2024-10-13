@@ -19,7 +19,7 @@ mastodon = Mastodon(
 
 def share_to_discord(title, link, excerpt):
     data = {
-        'content': f"{title}\n{link}\n\n{excerpt}"
+        'content': f"{title}\n\n{link}\n\n{excerpt}"
     }
     response = requests.post(DISCORD_WEBHOOK_URL, json=data)
     response.raise_for_status()
@@ -46,7 +46,7 @@ new_items = [entry for entry in feed.entries if entry.id not in posted_items]
 for item in new_items:
     custom_text = "Put your own text in here that shares with each blog post!"
     excerpt = item.summary if 'summary' in item else 'No excerpt available'
-    status_message = f"{custom_text}\n{item.title}\n{item.link}\n\n{excerpt}"
+    status_message = f"{custom_text}\n\n{item.title}\n\n{item.link}\n\n{excerpt}"
     
     # post to Mastodon
     mastodon.status_post(status=status_message)
